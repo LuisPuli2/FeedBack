@@ -7,11 +7,11 @@
 <body>
   <div>
     <svg class="fb-emotes-svg" style="display: none;">
-      <symbol id="fb-emote-terrible" data-emote="terrible" viewBox="0 0 100 100">
+      <!-- <symbol id="fb-emote-terrible" data-emote="terrible" viewBox="0 0 100 100">
         <path class="fb-emote__eye fb-emote__eye--left" d="M32,25 l10,10 a10,10 0 0,1 -20,0 a10,10 0 0,1 10,-10"/>
         <path class="fb-emote__eye fb-emote__eye--right" d="M58,35 l10,-10 a10,10 0 0,1 0,20 a10,10 0 0,1 -10,-10"/>
         <path class="fb-emote__smile" d="M30,68 q20,-13 40,0 M30,68 q20,-13 40,0"/>
-      </symbol>
+      </symbol> -->
       <symbol id="fb-emote-bad" data-emote="bad" viewBox="0 0 100 100">
         <path class="fb-emote__eye fb-emote__eye--left" d="M22,35 l10,-10 a10,10 0 0,1 0,20 a10,10 0 0,1 -10,-10"/>
         <path class="fb-emote__eye fb-emote__eye--right" d="M68,25 l10,10 a10,10 0 0,1 -20,0 a10,10 0 0,1 10,-10"/>
@@ -43,27 +43,28 @@
       <!-- Del Duis -->
       <div class="fb-heading">¿Qué tan probable es que mi vuelo se venda?</div>
       <div class="fb-cont__inner">
-        <div class="fb-emote" data-emote="terrible" id="terrible">
+        <!-- <div class="fb-emote" data-emote="terrible" id="terrible">
           <svg><use xlink:href="#fb-emote-terrible"/></svg>
-          <p class="fb-emote__caption">Estás bien pinche loco</p>
-        </div>
+          <p class="fb-emote__caption">Muy poco probable</p>
+        </div> -->
         <div class="fb-emote" data-emote="bad" id="bad">
           <svg><use xlink:href="#fb-emote-bad"/></svg>
-          <p class="fb-emote__caption">Muy poco probable</p>
+          <p class="fb-emote__caption">Poco probable</p>
         </div>
+        <!-- <div class="fb-emote s--active" data-emote="okay" id="okay"> -->
         <div class="fb-emote s--active" data-emote="okay" id="okay">
           <svg><use xlink:href="#fb-emote-okay"/></svg>
-          <p class="fb-emote__caption">Poco Probable</p>
+          <p class="fb-emote__caption">Probable</p>
         </div>
         <div class="fb-emote" data-emote="good" id="good">
           <svg><use xlink:href="#fb-emote-good"/></svg>
-          <p class="fb-emote__caption">Probable</p>
+          <p class="fb-emote__caption">Muy probable</p>
         </div>
         <div class="fb-emote" data-emote="great" id="great">
           <svg><use xlink:href="#fb-emote-great"/></svg>
-          <p class="fb-emote__caption">Muy Probable</p>
+          <p class="fb-emote__caption">Casi seguro</p>
         </div>
-        <div class="fb-cont__drag-cont">
+        <div class="fb-cont__drag-cont" hidden>
           <div class="fb-active-emote">
             <svg viewBox="0 0 100 100">
               <path class="fb-active-emote__eye fb-active-emote__eye--left" d="M32,25 a10,10 0 0,1 0,20 a10,10 0 0,1 0,-20"/>

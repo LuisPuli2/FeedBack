@@ -14,20 +14,21 @@ var $rightEye = $$('.fb-active-emote__eye--right');
 var $smile = $$('.fb-active-emote__smile');
 
 var emoteColors = {
-  terrible: '#f8b696',
-  bad: '#f9c686',
-  default: '#ffd68c'
+  bad: '#ff9933',
+  okay: '#f9c686',
+  default: '#ffcc00'
 }
 
 var animTime = 0.5;
 
 $("#precioUsuario").change( function(event) {
+    // Hacemos que aparezca la carita.
+    $(".fb-cont__drag-cont").show();
     // Aquí debería ir el precio que regresa de skyscanner.
     var precioPromedio = 1200;
+    // El precio que ingreso el usuario.
     var precioUsuario = parseInt($("#precioUsuario").val())
-    console.log("Precio user : ",precioUsuario);
-    console.log("Precio promedio : ",precioPromedio);
-    // $("#terrible").trigger('event');
+    // Hacemos el cambio de carita correapondiente.
     face = getFace(precioPromedio,precioUsuario)
     activa(face);
     
@@ -36,23 +37,18 @@ $("#precioUsuario").change( function(event) {
 // Dado un precio promedio y un precio del usuario, dtermina la cara correspondiente.
 function getFace(precioPromedio,precioUsuario) {
     if (precioPromedio<precioUsuario) {
-        console.log("terrible");
         // Más caro que el promedio.
         return "terrible";
     } else if ((precioPromedio*.80) < precioUsuario && precioUsuario <= precioPromedio) {
-        console.log("Entra en bad",(precioPromedio*.80) );
         // El precio del usuario está acotado entre el precio promedio y el 80% del precio promedio. 
         return "bad";
     } else if ((precioPromedio*.60) < precioUsuario && precioUsuario <= (precioPromedio*.80)) {
-        console.log("Entra en okay");
         // El precio del usuario está acotado entre el 80% del precio promedio y el 60% del precio promedio. 
         return "okay";
     } else if ((precioPromedio*.40) < precioUsuario && precioUsuario <= (precioPromedio*.60)) {
-        console.log("Entra en good");
         // El precio del usuario está acotado entre el 60% del precio promedio y el 40% del precio promedio.
         return "good";
     } else  {
-        console.log("Entra en great");
         // El precio del usuario está acotado por debajo del 40% del precio promedio.
         return "great";
     }
@@ -97,7 +93,7 @@ function getNumber (face){
     case "good":
         return 3;
     case "great":
-        return 4;
+        return 3;
     }
 }
 

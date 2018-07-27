@@ -62,7 +62,6 @@ body {
   justify-content: center;
   width: 76px;
   height: 76px;
-  cursor: pointer;
 }
 .fb-emote svg {
   display: block;
@@ -75,10 +74,13 @@ body {
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
+
+/* Esta activa las caritas (Las hace pequeñas)*/
 .fb-emote.s--active svg {
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
 }
+
 .fb-emote__caption {
   text-align: center;
   font-size: 26px;
@@ -86,6 +88,8 @@ body {
   color: #c8ced3;
   transition: all 0.5s;
 }
+
+/* Activa las letras de las caritas.*/
 .fb-emote.s--active .fb-emote__caption {
   color: #655e53;
   -webkit-transform: translateY(15px);
