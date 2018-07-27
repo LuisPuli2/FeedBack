@@ -1,0 +1,143 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #323232;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.fb-cont {
+  overflow: hidden;
+  position: relative;
+  margin: 100px auto;
+  width: 800px;
+  padding: 75px;
+  padding-bottom: 140px;
+  background: #fff;
+}
+.fb-cont__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.fb-cont__inner:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  height: 4px;
+  margin-top: -2px;
+  background: rgba(200, 206, 211, 0.5);
+  border-radius: 2px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.fb-cont__drag-cont {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 574px;
+  height: 100%;
+  margin-left: -287px;
+  pointer-events: none;
+  -webkit-transform: translate3d(50%, 0, 0);
+          transform: translate3d(50%, 0, 0);
+}
+.fb-heading {
+  margin: 0 auto 60px;
+  font-size: 30px;
+  text-align: center;
+  color: #737b7b;
+}
+.fb-emote {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  cursor: pointer;
+}
+.fb-emote svg {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 100%;
+  background: #c8ced3;
+  border-radius: 50%;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.fb-emote.s--active svg {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+.fb-emote__caption {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #c8ced3;
+  transition: all 0.5s;
+}
+.fb-emote.s--active .fb-emote__caption {
+  color: #655e53;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+}
+.fb-emote__eye {
+  stroke: none;
+  fill: #fff;
+}
+.fb-emote__smile {
+  stroke: #fff;
+  stroke-width: 10;
+  stroke-linecap: round;
+  fill: none;
+}
+.fb-active-emote {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 110px;
+  height: 110px;
+  margin-left: -55px;
+  margin-top: -55px;
+  background: #ffd68c;
+  border-radius: 50%;
+}
+.fb-active-emote svg {
+  width: 100%;
+  height: 100%;
+}
+.fb-active-emote__eye {
+  stroke: none;
+  fill: #655e53;
+}
+.fb-active-emote__smile {
+  stroke: #655e53;
+  stroke-width: 10;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.icon-link {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  width: 32px;
+}
+.icon-link img {
+  width: 100%;
+  vertical-align: top;
+}
+.icon-link--twitter {
+  left: auto;
+  right: 5px;
+}

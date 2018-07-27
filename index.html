@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FeedBack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <svg class="fb-emotes-svg" style="display: none;">
+      <symbol id="fb-emote-terrible" data-emote="terrible" viewBox="0 0 100 100">
+        <path class="fb-emote__eye fb-emote__eye--left" d="M32,25 l10,10 a10,10 0 0,1 -20,0 a10,10 0 0,1 10,-10"/>
+        <path class="fb-emote__eye fb-emote__eye--right" d="M58,35 l10,-10 a10,10 0 0,1 0,20 a10,10 0 0,1 -10,-10"/>
+        <path class="fb-emote__smile" d="M30,68 q20,-13 40,0 M30,68 q20,-13 40,0"/>
+      </symbol>
+      <symbol id="fb-emote-bad" data-emote="bad" viewBox="0 0 100 100">
+        <path class="fb-emote__eye fb-emote__eye--left" d="M22,35 l10,-10 a10,10 0 0,1 0,20 a10,10 0 0,1 -10,-10"/>
+        <path class="fb-emote__eye fb-emote__eye--right" d="M68,25 l10,10 a10,10 0 0,1 -20,0 a10,10 0 0,1 10,-10"/>
+        <path class="fb-emote__smile" d="M30,68 q20,-10 40,0 M30,68 q20,-10 40,0"/>
+      </symbol>
+      <symbol id="fb-emote-okay" viewBox="0 0 100 100">
+        <path class="fb-emote__eye fb-emote__eye--left" d="M32,25 a10,10 0 0,1 0,20 a10,10 0 0,1 0,-20"/>
+        <path class="fb-emote__eye fb-emote__eye--right" d="M68,25 a10,10 0 0,1 0,20 a10,10 0 0,1 0,-20"/>
+        <path class="fb-emote__smile" d="M35,73 q20,-4 35,-8 M35,73 q20,-4 35,-8"/>
+      </symbol>
+      <symbol id="fb-emote-good" viewBox="0 0 100 100">
+        <path class="fb-emote__eye fb-emote__eye--left" d="M32,25 a10,10 0 0,1 0,20 a10,10 0 0,1 0,-20"/>
+        <path class="fb-emote__eye fb-emote__eye--right" d="M68,25 a10,10 0 0,1 0,20 a10,10 0 0,1 0,-20"/>
+        <path class="fb-emote__smile" d="M30,68 q20,10 40,0 M30,68 q20,10 40,0"/>
+      </symbol>
+      <symbol id="fb-emote-great" viewBox="0 0 100 100">
+        <path class="fb-emote__eye fb-emote__eye--left" d="M32,25 a10,10 0 0,1 0,20 a10,10 0 0,1 0,-20"/>
+        <path class="fb-emote__eye fb-emote__eye--right" d="M68,25 a10,10 0 0,1 0,20 a10,10 0 0,1 0,-20"/>
+        <path class="fb-emote__smile" d="M30,68 q20,15 40,0 M30,68 q20,0 40,0"/>
+      </symbol>
+    </svg>
+
+    <div class="fb-cont">
+      <!-- Del Duis -->
+      <div style="background-color: white">
+        <h4>Ingresa el precio (Precio Recomendado: $1,200.00)</h4>
+        <input type="text" class="form-control" id="precioUsuario">
+      </div>
+      <!-- Del Duis -->
+      <div class="fb-heading">¿Qué tan probable es que mi vuelo se venda?</div>
+      <div class="fb-cont__inner">
+        <div class="fb-emote" data-emote="terrible" id="terrible">
+          <svg><use xlink:href="#fb-emote-terrible"/></svg>
+          <p class="fb-emote__caption">Estás bien pinche loco</p>
+        </div>
+        <div class="fb-emote" data-emote="bad" id="bad">
+          <svg><use xlink:href="#fb-emote-bad"/></svg>
+          <p class="fb-emote__caption">Muy poco probable</p>
+        </div>
+        <div class="fb-emote s--active" data-emote="okay" id="okay">
+          <svg><use xlink:href="#fb-emote-okay"/></svg>
+          <p class="fb-emote__caption">Poco Probable</p>
+        </div>
+        <div class="fb-emote" data-emote="good" id="good">
+          <svg><use xlink:href="#fb-emote-good"/></svg>
+          <p class="fb-emote__caption">Probable</p>
+        </div>
+        <div class="fb-emote" data-emote="great" id="great">
+          <svg><use xlink:href="#fb-emote-great"/></svg>
+          <p class="fb-emote__caption">Muy Probable</p>
+        </div>
+        <div class="fb-cont__drag-cont">
+          <div class="fb-active-emote">
+            <svg viewBox="0 0 100 100">
+              <path class="fb-active-emote__eye fb-active-emote__eye--left" d="M32,25 a10,10 0 0,1 0,20 a10,10 0 0,1 0,-20"/>
+              <path class="fb-active-emote__eye fb-active-emote__eye--right" d="M68,25 a10,10 0 0,1 0,20 a10,10 0 0,1 0,-20"/>
+              <path class="fb-active-emote__smile" d="M35,73 q20,-4 35,-8 M35,73 q20,-4 35,-8"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://dribbble.com/shots/2790473-Feedback" target="_blank" class="icon-link">
+      <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
+    </a>
+    <a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
+      <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
+    </a>
+  </div>
+  <!-- Tween Max -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
